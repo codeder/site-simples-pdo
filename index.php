@@ -19,7 +19,11 @@
     }else{
         $p = new Pages($connection);
         $res = $p->page($pag);
-        echo $res['content'];
+        if($res['content']){
+            echo $res['content'];
+        }else{
+            echo '<p class="bg-danger"><strong>Ops!</strong> Essa página não existe!</p>';
+        }
     }
     require_once("footer.php");
 

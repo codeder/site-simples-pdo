@@ -19,7 +19,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                       <h1 class="brand"><a href="<?php echo $dir; ?>">Code Education</a></h1>
+                       <h1 class="brand"><a href="<?php echo $dir; ?>home">Code Education</a></h1>
                 </div>
             </div>
 
@@ -27,12 +27,11 @@
 
             <div class="col-md-8">
 
-				<ul class="nav nav-tabs" role="tablist">
-					<li><a href="<?php echo $dir; ?>" title="">Home</a></li>
+				<ul class="nav nav-tabs" role="tablist">					
                     <?php
                         $p = new Pages($connection);
                         foreach($p->listpages() as $pags){
-                            echo '<li><a href="'.strtolower($pags["pages"]).'" title="'.$pags["pages"].'">'.$pags["pages"].'</a></li>';
+                            echo '<li><a href="'.$dir.strtolower($pags["pages"]).'" title="'.$pags["pages"].'">'.$pags["pages"].'</a></li>';
                         }
                     ?>
 				</ul>
