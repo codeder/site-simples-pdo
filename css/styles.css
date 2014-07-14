@@ -1,0 +1,12 @@
+header{
+	margin-bottom:20px;
+}
+.bg-success, 
+.bg-danger{
+	padding: 20px;
+}
+footer{
+	background: #ccc;
+	padding: 20px;
+	margin-top: 20px;
+}
