@@ -1,9 +1,9 @@
 <?php
 
-require_once("./fixture.php");
+require_once("access.php");
 
 try{
-    $connection = new \PDO("mysql:host=localhost;dbname=$db",$user,$pass);
+    $conn = new \PDO("mysql:host=localhost;dbname=$db",$user,$pass);
 }
 catch(\PDOException $e){
         die("Erro. Cod: ".$e->getCode()." Mensagem: ".$e->getMessage());
