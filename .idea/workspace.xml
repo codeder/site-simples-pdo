@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3128f6df-91fe-48b1-aebc-433674406169" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bd/fixture.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/busca.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fixture.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/contato.php" afterPath="$PROJECT_DIR$/pages/contato.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/pages/footer.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/pages/header.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scripts.php" afterPath="$PROJECT_DIR$/pages/scripts.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sucesso.php" afterPath="$PROJECT_DIR$/pages/sucesso.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bd/codeeducation_pdo.sql" afterPath="$PROJECT_DIR$/bd/codeeducation_pdo.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/db.php" afterPath="$PROJECT_DIR$/functions/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/pages.php" afterPath="$PROJECT_DIR$/functions/pages.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="site-simples-pdo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,10 +68,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="access.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="access.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions/access.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="11" selection-start="58" selection-end="58" vertical-scroll-proportion="0.048025616" vertical-offset="0" max-vertical-offset="937">
+            <state line="3" column="11" selection-start="58" selection-end="58" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="165">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="34" selection-start="417" selection-end="417" vertical-scroll-proportion="0.11217949" vertical-offset="0" max-vertical-offset="936">
               <folding />
             </state>
           </provider>
@@ -110,15 +108,6 @@
         <entry file="file://$PROJECT_DIR$/pages/scripts.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="4" selection-start="7" selection-end="112" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="195">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".htaccess" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.htaccess">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="41" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
               <folding />
             </state>
           </provider>
@@ -159,6 +148,7 @@
         <option value="$PROJECT_DIR$/functions/pages.php" />
         <option value="$PROJECT_DIR$/pages/404.php" />
         <option value="$PROJECT_DIR$/functions/access.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -395,7 +385,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/access.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="11" selection-start="58" selection-end="58" vertical-scroll-proportion="0.048025616" vertical-offset="0" max-vertical-offset="937">
+        <state line="3" column="11" selection-start="58" selection-end="58" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="34" selection-start="417" selection-end="417" vertical-scroll-proportion="0.11217949" vertical-offset="0" max-vertical-offset="936">
           <folding />
         </state>
       </provider>

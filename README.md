@@ -2,12 +2,7 @@
 ###Site simples em PHP usando PDO
 ***
 
-__O que foi feito:__
-
-1.  Estruturação html/css das páginas com Bootstrap 3;
-2.  Fixture para criação do banco de dados e preenchimento automático de dados ilustrativos;
-3.  Conexão do banco de dados usando PDO;
-4.  Alteração do conteúdo das páginas pelo banco de dados com PDO;
-5.  Busca usando com parâmetro GET e PDO;
-6.  Envio dos dados do formulario de contato com método POST;
-7.  Envio do projeto para o GitHub.
+__Modo de instalação:__
+1.  Abra o arquivo "fixture.php" que está dentro do diretório "db", e altere o valor da variável "pass" para a do seu servidor;
+2.  No terminal, dentro do diretório raíz do projeto digite: "php db/fixture.php", ou acesse diretamente o arquivo via browser. Isso vai criar e popular as tabelas no banco;
+3.  Depois é só acessar o projeto;
