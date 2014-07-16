@@ -58,14 +58,16 @@ $rts = $stmt->fetchAll(\PDO::FETCH_COLUMN);
 /* Gerando a rota */
 $routes = function() use($conn,$pag,$rts){
 
-    if (in_array($pag, $rts)){
-       $file = $pag;
-    }else if($pag == "site-simples-pdo"){
-        $pag = "home";
-        $file = $pag;
-    }else if(isset($_GET['s'])){
+    if(isset($_GET['s'])){
         $pag = "busca";
         $file = $pag;
+    }
+    else if(empty($pag)){
+        $pag = "home";
+        $file = $pag;
+    }
+    else if (in_array($pag, $rts)){
+       $file = $pag;
     }
     else{
         $pag = "404";
