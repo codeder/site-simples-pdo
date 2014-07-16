@@ -1,6 +1,6 @@
 <?php
     $host="localhost";
     $user="root";
-    $pass="";
+    $pass="storm1906";
     $db="codeeducation_pdo";
 ?>
