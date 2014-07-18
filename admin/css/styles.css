@@ -14,6 +14,12 @@ header{
 	position: relative;
 	bottom: -8px;
 }
+.bg-success,
+.bg-danger{
+    padding: 20px;
+    width: 100%;
+    display: block;
+}
 footer{
 	background: #ccc;
 	padding: 20px;

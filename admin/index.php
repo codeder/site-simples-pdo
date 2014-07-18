@@ -1,3 +1,7 @@
 <?php require_once("inc/header.php"); ?>
-Home
+
+<?php
+$registerUser();
+?>
+
 <?php require_once("inc/header.php"); ?>
