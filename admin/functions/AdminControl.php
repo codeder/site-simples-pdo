@@ -2,13 +2,15 @@
 
 require_once("db.php");
 
-$options=['salt'=>"Frase segura de exemplo apenas",'cost'=>10];
-$password=password_hash($_POST['password'],PASSWORD_DEFAULT,$options);
 
 /* Resgistrar usuários */
-$registerUser = function() use ($conn,$password){
+$registerUser = function() use ($conn){
 
     if(isset($_POST['send'])){
+
+        $options=['salt'=>"Frase segura de exemplo apenas",'cost'=>10];
+        $password=password_hash($_POST['password'],PASSWORD_DEFAULT,$options);
+
         $query = "INSERT INTO users VALUES(null,:name,:username,:email,:password,:status)";
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":name",$_POST['name'], PDO::PARAM_STR);
@@ -33,11 +35,13 @@ $getUsers = function() use ($conn){
 		echo '<td>'.$result->name.'</td>';
 		echo '<td>'.$result->username.'</td>';
 		echo '<td>'.$result->email.'</td>';
-		echo '<td>'.$result->status.'</td>';
-		echo '<td><a href="user_edit.php?e=1&id='.$result->id.'" title="Editar">editar</a></td>';
+		echo '<td>'.($result->status).'</td>';
+		echo '<td><a href="user_edit.php?uid='.$result->id.'" title="Editar">editar</a></td>';
 		echo '</tr>';
     }
 };
+
+
 
 /* Editar usuários */
 /*
@@ -51,6 +55,7 @@ $editUsers = function() use ($conn,$password){
     $stmt->bindParam(":status",$_POST['status'], PDO::PARAM_INT);
     $stmt->execute();
     echo '<span class="bg-success">Cadastro atualizado com sucesso.</span>';
-};*/
+};
+*/
 
 ?>

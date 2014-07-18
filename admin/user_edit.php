@@ -2,7 +2,12 @@
 
 <div class="content">
 
-    <?php $registerUser(); ?>
+    <?php
+    $query = "SELECT * FROM users WHERE id=:id";
+    $result = $conn->prepare($query);
+    $result->execute(array(':id' => $_GET['uid']) );
+    while  ($user = $result->fetch(PDO::FETCH_ASSOC)) {
+    ?>
 
 	<div class="row">
 		<div class="col-md-12">
@@ -19,17 +24,17 @@
 
 				<div class="form-group">
 					<label for="name">Nome do usuário</label>
-					<input type="text" name="name" class="form-control" id="name" value="">
+					<input type="text" name="name" class="form-control" id="name" value="<?php echo $user['name']; ?>">
 				</div>
 
 				<div class="form-group">
 					<label for="slug">Username</label>
-					<input type="text" name="username" class="form-control" id="username">
+					<input type="text" name="username" class="form-control" id="username" value="<?php echo $user['username']; ?>">
 				</div>
 
 				<div class="form-group">
 					<label for="email">E-mail:</label>
-					<input type="email" name="email" class="form-control" id="email">
+					<input type="email" name="email" class="form-control" id="email" value="<?php echo $user['email']; ?>">
 				</div>
 
                 <div class="form-group">
@@ -39,14 +44,14 @@
 
 				<div class="radio">
 					<label>
-						<input type="radio" name="status" value="1">
+						<input type="radio" name="status" value="1"<?php if($user['status']==1){ echo "checked";} ?>>
 						Ativo
 					</label>
 				</div>
 
 				<div class="radio">
 					<label>
-						<input type="radio" name="status" value="0">
+						<input type="radio" name="status" value="0"<?php if($user['status']==0){ echo "checked";} ?>>
 						Inativo
 					</label>
 				</div>
@@ -62,7 +67,7 @@
 		</div>
 	</div>
 
-
+<?php } ?>
 
 </div>
 
