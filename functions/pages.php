@@ -60,7 +60,7 @@ $routes = function() use($conn,$pag,$rts){
 
     if(isset($_GET['s'])){
         $pag = "busca";
-        $file = $pag;
+        require_once("pages/busca.php");
     }
     else if(empty($pag)){
         $pag = "home";
@@ -71,13 +71,13 @@ $routes = function() use($conn,$pag,$rts){
     }
     else{
         $pag = "404";
-        $file = $pag;
     }
 
     $p = new Pages($conn);
     $res = $p->page($pag);
 
-    require_once("pages/".$file.".php");
+    //require_once("pages/".$file.".php");
+    require_once("pages/template.php");
 
 }
 

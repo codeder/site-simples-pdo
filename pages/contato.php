@@ -2,11 +2,18 @@
 <div class="col-md-12">
     <div class="row">
       <div class="col-md-12">
-        <h2>Contato</h2>
+        <h1><?php echo $res['title']; ?></h1>
       </div>
     </div>
 
     <div class="row">
+      <div class="col-md-12">
+        <p><?php echo $res['content']; ?></p>
+      </div>
+    </div>
+    
+
+    <div class="row contact">
       <div class="col-md-12">
         <form class="form-horizontal" role="form" method="post" action="sucesso">
 

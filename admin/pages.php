@@ -28,8 +28,9 @@
 					<th>Título</th>
 					<th>Slug</th>
 					<th>Aparece no menu?</th>
-					<th>&nbsp;</th>
-					<th>&nbsp;</th>
+					<th>Editar</th>
+					<th>Excluir</th>
+					<th>Visualizar</th>
 				</tr>
 
 				<?php
@@ -45,6 +46,7 @@
 					echo '<td>'.($page['status']=="1" ? 'Sim':'Não').'</td>';
 					echo '<td><a href="page_edit.php?id='.$page['id'].'" title="Editar">editar</a></td>';
 					echo '<td><a href="#" title="Excluir">excluir</a></td>';
+					echo '<td><a target="blank" href="/'.$page['slug'].'" title="Visualizar página">Visualizar página</a></td>';
 					echo '</tr>';
 				}
 				?>	

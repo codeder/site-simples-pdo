@@ -7,7 +7,6 @@
     $result = $conn->prepare($query);
     $result->execute(array(':id' => $_GET['id']) );
     while  ($page = $result->fetch(PDO::FETCH_ASSOC)) {
-    	echo $page['status'];
     ?>
 	
 	<div class="row">

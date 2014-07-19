@@ -7,7 +7,7 @@ $message = $_POST["message"];
 
 <article class="row">
 	<div class="col-md-12">
-		<h2>Obrigado pelo contato</h2>
+		<h1><?php echo $res['title']; ?></h1>
 		<p class="bg-success">Seus dados foram enviados com sucesso. Confira abaixo:</p>
 
 		<p>
