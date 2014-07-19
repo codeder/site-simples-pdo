@@ -118,5 +118,58 @@ $getUsers = function() use ($conn){
 */    
 
 
+/* PÁGINAS */
 
-    ?>
+/* Registra a página */
+$registerPage = function() use ($conn){
+
+    if(isset($_POST['send'])){
+
+        /* Verifica se o campo slug já existe no banco */
+        $stmt = $conn->prepare("SELECT slug FROM site WHERE slug=:slug");
+        $stmt->bindValue(":slug",$_POST['slug'], PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        if((strtolower($_POST['slug']) == strtolower($result["slug"]))){
+            echo '<span class="bg-danger">O slug "<strong>'.$_POST['slug'].'</strong>" já está sendo usado. Cadastre outro.</span>';
+        }else{
+
+            /* Se não existir, efetua o cadastro */            
+            $query = "INSERT INTO site VALUES(null,:slug,:title,:content,:status)";
+            $stmt = $conn->prepare($query);
+            $stmt->bindValue(":slug",$_POST['slug'], PDO::PARAM_STR);
+            $stmt->bindValue(":title",$_POST['title'], PDO::PARAM_STR);
+            $stmt->bindValue(":content",$_POST['content'], PDO::PARAM_STR);
+            $stmt->bindValue(":status",$_POST['status'], PDO::PARAM_INT);
+            if($stmt->execute()){
+                header("Location: pages.php?title=".$_POST['title']);
+            }else{
+                echo '<span class="bg-danger">Erro ao cadastar a página</span>';
+            }
+        }        
+    }
+
+};
+
+/* Editar página */
+$editPages = function() use ($conn){
+
+    if(isset($_POST['send'])){       
+
+        $query = "UPDATE site SET slug=:slug,title=:title,content=:content,status=:status WHERE id=:id";
+        $stmt = $conn->prepare($query);
+        $stmt->bindValue(":id",$_POST['id'], PDO::PARAM_INT);
+        $stmt->bindValue(":slug",$_POST['slug'], PDO::PARAM_STR);
+        $stmt->bindValue(":title",$_POST['title'], PDO::PARAM_STR);
+        $stmt->bindValue(":content",$_POST['content'], PDO::PARAM_STR);        
+        $stmt->bindValue(":status",$_POST['status'], PDO::PARAM_INT);
+        if($stmt->execute()){
+            echo '<span class="bg-success">Página <strong>'.$_POST['title'].'</strong> atualizada com sucesso.</span>';    
+        }else{
+            echo '<span class="bg-danger">Houve um erro ao atualizar a página</span>';
+        }
+
+    }
+};
+
+?>

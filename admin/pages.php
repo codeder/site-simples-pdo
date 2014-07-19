@@ -1,13 +1,21 @@
 <?php require_once("inc/header.php"); ?>
 
 <div class="content">
+
+	<?php
+	if((isset($_POST['type'])) AND ($_POST['type']==1)){
+		$editPages();
+	}else if(($_GET['title'])){
+		echo '<span class="bg-success">Página <strong>'.$_GET['title'].'</strong> inserida com sucesso.</span>';
+	}
+	?>
 	
 	<div class="row">
 		<div class="col-md-6">
-			<h2>Editar páginas</h2>
+			<h2>Páginas</h2>
 		</div>
 		<div class="col-md-6">
-			<a class="btn btn-primary pull-right" href="page_edit.php" title="Criar página">Criar página</a>
+			<a class="btn btn-primary pull-right" href="page_insert.php" title="Criar página">Criar página</a>
 		</div>
 	</div>
 
@@ -19,50 +27,27 @@
 					<th>ID</th>
 					<th>Título</th>
 					<th>Slug</th>
-					<th>Status</th>
+					<th>Aparece no menu?</th>
 					<th>&nbsp;</th>
 					<th>&nbsp;</th>
 				</tr>
-				<tr>
-					<td>1</td>
-					<td>Título da página</td>
-					<td>Slug</td>
-					<td>1</td>
-					<td><a href="page_edit.php" title="Editar">editar</a></td>
-					<td><a href="#" title="Excluir">excluir</a></td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>Título da página</td>
-					<td>Slug</td>
-					<td>1</td>
-					<td><a href="page_edit.php" title="Editar">editar</a></td>
-					<td><a href="#" title="Excluir">excluir</a></td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>Título da página</td>
-					<td>Slug</td>
-					<td>1</td>
-					<td><a href="page_edit.php" title="Editar">editar</a></td>
-					<td><a href="#" title="Excluir">excluir</a></td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td>Título da página</td>
-					<td>Slug</td>
-					<td>1</td>
-					<td><a href="page_edit.php" title="Editar">editar</a></td>
-					<td><a href="#" title="Excluir">excluir</a></td>
-				</tr>
-				<tr>
-					<td>5</td>
-					<td>Título da página</td>
-					<td>Slug</td>
-					<td>1</td>
-					<td><a href="page_edit.php" title="Editar">editar</a></td>
-					<td><a href="#" title="Excluir">excluir</a></td>
-				</tr>		
+
+				<?php
+
+				$query = "SELECT * FROM site ORDER BY id ASC";
+				$result = $conn->prepare($query);
+				$result->execute();
+				while ($page = $result->fetch(PDO::FETCH_ASSOC)) {
+					echo '<tr>';
+					echo '<td>'.$page['id'].'</td>';
+					echo '<td>'.$page['title'].'</td>';
+					echo '<td>'.$page['slug'].'</td>';
+					echo '<td>'.($page['status']=="1" ? 'Sim':'Não').'</td>';
+					echo '<td><a href="page_edit.php?id='.$page['id'].'" title="Editar">editar</a></td>';
+					echo '<td><a href="#" title="Excluir">excluir</a></td>';
+					echo '</tr>';
+				}
+				?>	
 
 			</table>
 
@@ -71,7 +56,7 @@
 
 	<div class="row">
 		<div class="col-md-12">
-			<a class="btn btn-primary pull-right" href="page_edit.php" title="Criar página">Criar página</a>
+			<a class="btn btn-primary pull-right" href="page_insert.php" title="Criar página">Criar página</a>
 		</div>
 	</div>
 
