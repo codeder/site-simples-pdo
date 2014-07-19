@@ -3,7 +3,13 @@
 
 <div class="content">
 
-    <?php $registerUser(); ?>
+	<?php
+	if((isset($_POST['type'])) AND ($_POST['type']==1)){
+		$editUsers();
+	}else if(($_GET['name'])){
+		echo '<span class="bg-success">Usuário <strong>'.$_GET['name'].'</strong> inserido com sucesso.</span>';
+	}
+	?>
 	
 	<div class="row">
 		<div class="col-md-6">
@@ -27,7 +33,7 @@
 					<th>&nbsp;</th>
 				</tr>
 
-                <?php $getUsers(); ?>
+				<?php $getUsers(); ?>
 
 			</table>
 
@@ -36,7 +42,7 @@
 
 	<div class="row">
 		<div class="col-md-12">
-            <a class="btn btn-primary pull-right" href="insert_user.php" title="Criar usuário">Criar usuário</a>
+			<a class="btn btn-primary pull-right" href="insert_user.php" title="Criar usuário">Criar usuário</a>
 		</div>
 	</div>
 

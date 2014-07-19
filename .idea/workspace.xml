@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="84261e8e-c999-4a53-855c-ca979b56b31c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/functions/AdminControl.php" afterPath="$PROJECT_DIR$/admin/functions/AdminControl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/user_edit.php" afterPath="$PROJECT_DIR$/admin/user_edit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/inc/header.php" afterPath="$PROJECT_DIR$/admin/inc/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/users.php" afterPath="$PROJECT_DIR$/admin/users.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="site-simples-pdo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,14 +28,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AdminControl.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AdminControl.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/functions/AdminControl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="37" selection-start="1340" selection-end="1340" vertical-scroll-proportion="-20.916666" vertical-offset="53" max-vertical-offset="990">
+            <state line="33" column="41" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.52828175" vertical-offset="0" max-vertical-offset="990">
               <folding>
-                <marker date="1405693420690" expanded="true" signature="302:373" placeholder="INSERT INTO ..." />
-                <marker date="1405693420690" expanded="true" signature="947:1010" placeholder="SELECT id,na..users..." />
-                <marker date="1405693420690" expanded="true" signature="1553:1659" placeholder="UPDATE users..." />
+                <marker date="1405777826207" expanded="true" signature="302:373" placeholder="INSERT INTO ..." />
+                <marker date="1405777826207" expanded="true" signature="947:1010" placeholder="SELECT id,na..users..." />
+                <marker date="1405777826207" expanded="true" signature="1150:1179" placeholder="..." />
+                <marker date="1405777826207" expanded="true" signature="1154:1178" placeholder="..." />
+                <marker date="1405777826207" expanded="true" signature="1154:1179" placeholder="..." />
+                <marker date="1405777826207" expanded="true" signature="1584:1690" placeholder="UPDATE users..." />
               </folding>
             </state>
           </provider>
@@ -43,16 +47,7 @@
       <file leaf-file-name="users.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="29" selection-start="95" selection-end="95" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="765">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="insert_user.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/insert_user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="51" selection-start="316" selection-end="316" vertical-scroll-proportion="0.2561366" vertical-offset="0" max-vertical-offset="1095">
+            <state line="30" column="16" selection-start="591" selection-end="591" vertical-scroll-proportion="-18.75" vertical-offset="0" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
@@ -61,7 +56,7 @@
       <file leaf-file-name="user_edit.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/user_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="52" selection-start="214" selection-end="214" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1185">
+            <state line="8" column="40" selection-start="255" selection-end="266" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1185">
               <folding>
                 <marker date="1405693309214" expanded="true" signature="89:121" placeholder="SELECT * FRO..users..." />
               </folding>
@@ -87,20 +82,20 @@
         <option value="$PROJECT_DIR$/admin/index.php" />
         <option value="$PROJECT_DIR$/admin/css/styles.css" />
         <option value="$PROJECT_DIR$/admin/sucess.php" />
-        <option value="$PROJECT_DIR$/admin/inc/header.php" />
         <option value="$PROJECT_DIR$/admin/functions/insert_user.php" />
         <option value="$PROJECT_DIR$/admin/user_edit.php" />
-        <option value="$PROJECT_DIR$/admin/functions/AdminControl.php" />
-        <option value="$PROJECT_DIR$/admin/users.php" />
         <option value="$PROJECT_DIR$/admin/insert_user.php" />
+        <option value="$PROJECT_DIR$/admin/inc/header.php" />
+        <option value="$PROJECT_DIR$/admin/users.php" />
+        <option value="$PROJECT_DIR$/admin/functions/AdminControl.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1920" />
-    <option name="height" value="1056" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -156,53 +151,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="functions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-simples-pdo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-simples-pdo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-simples-pdo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-simples-pdo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-simples-pdo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-simples-pdo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -264,7 +213,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1920" height="1056" extended-state="6" />
+    <frame x="0" y="-4" width="1920" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -306,11 +255,51 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/admin/functions/AdminControl.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="37" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="990">
+          <folding>
+            <marker date="1405777826207" expanded="true" signature="302:373" placeholder="INSERT INTO ..." />
+            <marker date="1405777826207" expanded="true" signature="947:1010" placeholder="SELECT id,na..users..." />
+            <marker date="1405777826207" expanded="true" signature="1150:1179" placeholder="..." />
+            <marker date="1405777826207" expanded="true" signature="1154:1178" placeholder="..." />
+            <marker date="1405777826207" expanded="true" signature="1154:1179" placeholder="..." />
+            <marker date="1405777826207" expanded="true" signature="1584:1690" placeholder="UPDATE users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="29" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/insert_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="51" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/user_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="52" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1185">
+          <folding>
+            <marker date="1405693309214" expanded="true" signature="89:121" placeholder="SELECT * FRO..users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/functions/AdminControl.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="2" selection-start="1482" selection-end="1482" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="915">
           <folding>
-            <marker date="1405693420690" expanded="true" signature="302:373" placeholder="INSERT INTO ..." />
-            <marker date="1405693420690" expanded="true" signature="947:1010" placeholder="SELECT id,na..users..." />
-            <marker date="1405693420690" expanded="true" signature="1553:1659" placeholder="UPDATE users..." />
+            <marker date="1405777826207" expanded="true" signature="302:373" placeholder="INSERT INTO ..." />
+            <marker date="1405777826207" expanded="true" signature="947:1010" placeholder="SELECT id,na..users..." />
+            <marker date="1405777826207" expanded="true" signature="1150:1179" placeholder="..." />
+            <marker date="1405777826207" expanded="true" signature="1154:1178" placeholder="..." />
+            <marker date="1405777826207" expanded="true" signature="1154:1179" placeholder="..." />
+            <marker date="1405777826207" expanded="true" signature="1584:1690" placeholder="UPDATE users..." />
           </folding>
         </state>
       </provider>
@@ -331,9 +320,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="4" selection-start="45" selection-end="109" vertical-scroll-proportion="0.08004269" vertical-offset="0" max-vertical-offset="937">
-          <folding />
-        </state>
+        <state line="5" column="4" selection-start="45" selection-end="109" vertical-scroll-proportion="0.08004269" vertical-offset="0" max-vertical-offset="937" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/access.php">
@@ -352,9 +339,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/functions/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="161" selection-end="161" vertical-scroll-proportion="0.1280683" vertical-offset="0" max-vertical-offset="937">
-          <folding />
-        </state>
+        <state line="8" column="1" selection-start="161" selection-end="161" vertical-scroll-proportion="0.1280683" vertical-offset="0" max-vertical-offset="937" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
@@ -394,42 +379,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/inc/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="49" vertical-scroll-proportion="0.016008537" vertical-offset="0" max-vertical-offset="937">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/user_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="52" selection-start="214" selection-end="214" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1185">
-          <folding>
-            <marker date="1405693309214" expanded="true" signature="89:121" placeholder="SELECT * FRO..users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/functions/AdminControl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="37" selection-start="1340" selection-end="1340" vertical-scroll-proportion="-20.916666" vertical-offset="53" max-vertical-offset="990">
-          <folding>
-            <marker date="1405693420690" expanded="true" signature="302:373" placeholder="INSERT INTO ..." />
-            <marker date="1405693420690" expanded="true" signature="947:1010" placeholder="SELECT id,na..users..." />
-            <marker date="1405693420690" expanded="true" signature="1553:1659" placeholder="UPDATE users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="29" selection-start="95" selection-end="95" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="765">
+        <state line="31" column="50" selection-start="740" selection-end="740" vertical-scroll-proportion="0.49626467" vertical-offset="0" max-vertical-offset="937">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/insert_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="51" selection-start="316" selection-end="316" vertical-scroll-proportion="0.2561366" vertical-offset="0" max-vertical-offset="1095">
+        <state line="16" column="51" selection-start="316" selection-end="316" vertical-scroll-proportion="0.08751334" vertical-offset="158" max-vertical-offset="1095">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/user_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="40" selection-start="255" selection-end="266" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1185">
+          <folding>
+            <marker date="1405693309214" expanded="true" signature="89:121" placeholder="SELECT * FRO..users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="16" selection-start="591" selection-end="591" vertical-scroll-proportion="-18.75" vertical-offset="0" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/functions/AdminControl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="41" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.52828175" vertical-offset="0" max-vertical-offset="990">
+          <folding>
+            <marker date="1405777826207" expanded="true" signature="302:373" placeholder="INSERT INTO ..." />
+            <marker date="1405777826207" expanded="true" signature="947:1010" placeholder="SELECT id,na..users..." />
+            <marker date="1405777826207" expanded="true" signature="1150:1179" placeholder="..." />
+            <marker date="1405777826207" expanded="true" signature="1154:1178" placeholder="..." />
+            <marker date="1405777826207" expanded="true" signature="1154:1179" placeholder="..." />
+            <marker date="1405777826207" expanded="true" signature="1584:1690" placeholder="UPDATE users..." />
+          </folding>
         </state>
       </provider>
     </entry>

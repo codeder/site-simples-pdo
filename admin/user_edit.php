@@ -20,7 +20,7 @@
 		<div class="col-md-12">
 
 
-			<form class="mgr" action="" method="POST">
+			<form class="mgr" action="users.php" method="POST">
 
 				<div class="form-group">
 					<label for="name">Nome do usuário</label>
@@ -57,8 +57,10 @@
 				</div>
 
 				<div class="actions">
+					<input type="hidden" name="uid" value="<?php echo $user['id']; ?>">
+					<input type="hidden" name="type" value="1">
 					<button type="submit" name="send" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon glyphicon-floppy-disk"></span> Salvar</button>
-					<button type="submit" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon glyphicon-floppy-disk"></span> Cancelar</button>
+					<a href="users.php" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon glyphicon-floppy-disk"></span> Cancelar</a>
 				</div>
 
 			</form>

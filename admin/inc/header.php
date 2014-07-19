@@ -27,10 +27,10 @@ require_once("functions/AdminControl.php");
 
 					<div class="col-md-12">
 						<ul class="nav nav-tabs" role="tablist">
-							<li><a href="users.php?e=1" title="Bem-vindo Eder!">Bem-vindo Eder!</a></li>
-							<li><a href="users.php?e=0" title="Usuários">Usuários</a></li>
-							<li><a href="pages.php" title="Páginas">Páginas</a></li>
-							<li><a href="logout.php" title="Sair">Sair</a></li>							
+							<li><a href="../admin/user_edit.php" title="Bem-vindo Eder!">Bem-vindo Eder!</a></li>
+							<li><a href="../admin/users.php" title="Usuários">Usuários</a></li>
+							<li><a href="../admin/pages.php" title="Páginas">Páginas</a></li>
+							<li><a href="../admin/logout.php" title="Sair">Sair</a></li>
 						</ul>
 					</div>
 
