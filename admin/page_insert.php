@@ -2,7 +2,7 @@
 
 <div class="content">
 
-	<?php $registerPage(); echo $_POST['status']; ?>
+	<?php $registerPage(); ?>
 
 	<div class="row">
 		<div class="col-md-12">
@@ -18,17 +18,17 @@
 
 				<div class="form-group">
 					<label for="title">Título</label>
-					<input type="text" name="title" class="form-control" id="title" value="<?php echo $_POST['title']; ?>">
+					<input type="text" name="title" class="form-control" id="title" value="<?php if(isset($_POST['title'])) { echo $_POST['title']; } ?>">
 				</div>
 
 				<div class="form-group">
 					<label for="slug">Slug</label>
-					<input type="text" name="slug" class="form-control" id="slug" value="<?php echo $_POST['slug']; ?>">
+					<input type="text" name="slug" class="form-control" id="slug" value="<?php if(isset($_POST['slug'])) { echo $_POST['slug']; } ?>">
 				</div>
 
 				<div class="form-group">
 					<label for="content">Conteúdo</label>					
-					<textarea name="content" id="content" class="form-control" rows="20"><?php echo $_POST['content']; ?></textarea>
+					<textarea name="content" id="content" class="form-control" rows="20"><?php if(isset($_POST['content'])) { echo $_POST['content']; } ?></textarea>
 					<script>                	
 						CKEDITOR.replace( 'content' );
 					</script>
@@ -36,14 +36,14 @@
 
 				<div class="radio">
 					<label>
-						<input type="radio" name="status" value="<?php echo $_POST['status']; ?>" <?php echo ($_POST['status']==1 ? 'checked':''); ?>>
+						<input type="radio" name="status" value="<?php if(isset($_POST['status'])) { echo $_POST['status']; } ?>" <?php if((isset($_POST['status']) AND ($_POST['status']==1))){ echo "checked"; } ?>>
 						Ativa
 					</label>
 				</div>
 
 				<div class="radio">
 					<label>
-						<input type="radio" name="status" value="<?php echo $_POST['status']; ?>" <?php echo ($_POST['status']==0 ? 'checked':''); ?>>
+						<input type="radio" name="status" value="<?php if(isset($_POST['status'])) { echo $_POST['status']; } ?>" <?php if((isset($_POST['status']) AND ($_POST['status']==0))){ echo "checked"; } ?>>
 						Inativa
 					</label>
 				</div>

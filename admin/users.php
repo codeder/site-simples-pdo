@@ -8,7 +8,7 @@ require_once("inc/header.php");
 	<?php
 	if((isset($_POST['type'])) AND ($_POST['type']==1)){
 		$editUsers();
-	}else if(($_GET['name'])){
+	}else if((isset($_GET['name']))){
 		echo '<span class="bg-success">Usuário <strong>'.$_GET['name'].'</strong> inserido com sucesso.</span>';
 	}
 	?>
@@ -27,9 +27,9 @@ require_once("inc/header.php");
 
 			<table class="table table-striped">
 				<tr>
-					<th>ID</th>
-					<th>Username</th>
+					<th>ID</th>					
 					<th>Nome</th>
+					<th>Username</th>
 					<th>E-mail</th>
 					<th>Status</th>
 					<th>&nbsp;</th>
@@ -44,8 +44,8 @@ require_once("inc/header.php");
 				while ($user = $result->fetch(PDO::FETCH_ASSOC)) {
 					echo '<tr>';
 					echo '<td>'.$user['id'].'</td>';
-					echo '<td>'.$user['username'].'</td>';
 					echo '<td>'.$user['name'].'</td>';
+					echo '<td>'.$user['username'].'</td>';					
 					echo '<td>'.$user['email'].'</td>';
 					echo '<td>'.($user['status']=="1" ? 'Ativo':'Inativo').'</td>';
 					echo '<td><a href="user_edit.php?uid='.$user['id'].'" title="Editar">[ editar ]</a></td>';

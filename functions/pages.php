@@ -1,6 +1,6 @@
 <?php
-require_once("access.php");
-require_once("functions/db.php");
+require_once("admin/functions/access.php");
+require_once("admin/functions/db.php");
 
 class Pages{
     private $db;

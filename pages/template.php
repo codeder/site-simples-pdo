@@ -6,7 +6,9 @@ if($pag=="contato"){
 	require_once("sucesso.php");
 }
 else{
-	echo '<h1>'.$res['title'].'</h1>';
+	if($pag != "busca"){
+		echo '<h1>'.$res['title'].'</h1>';
+	}
 	echo $res['content'];
 }
 ?>

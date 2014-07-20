@@ -1,6 +1,6 @@
 <?php
 
-require_once("../functions/access.php");
+require_once("admin/functions/access.php");
 
 try {
     $conn = new \PDO("mysql:host=$host", $user, $pass);

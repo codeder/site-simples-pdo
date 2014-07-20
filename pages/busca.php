@@ -2,7 +2,7 @@
 
 <article class="row">
     <div class="col-md-12">
-        <h2>Você buscou por: <?php echo $s; ?></h2>
+        <h1>Você buscou por: <?php echo $s; ?></h1>
 
         <ul>
             <?php

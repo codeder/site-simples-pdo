@@ -5,7 +5,7 @@
 	<?php
 	if((isset($_POST['type'])) AND ($_POST['type']==1)){
 		$editPages();
-	}else if(($_GET['title'])){
+	}else if((isset($_GET['title']))){
 		echo '<span class="bg-success">Página <strong>'.$_GET['title'].'</strong> inserida com sucesso.</span>';
 	}
 	?>
@@ -27,7 +27,7 @@
 					<th>ID</th>
 					<th>Título</th>
 					<th>Slug</th>
-					<th>Aparece no menu?</th>
+					<th class="center">Mostrar no menu superior?</th>
 					<th>Editar</th>
 					<th>Visualizar</th>
 				</tr>
@@ -42,7 +42,7 @@
 					echo '<td>'.$page['id'].'</td>';
 					echo '<td>'.$page['title'].'</td>';
 					echo '<td>'.$page['slug'].'</td>';
-					echo '<td>'.($page['status']=="1" ? 'Sim':'Não').'</td>';
+					echo '<td class="center">'.($page['status']=="1" ? 'Sim':'Não').'</td>';
 					echo '<td><a href="page_edit.php?id='.$page['id'].'" title="Editar">[ editar ]</a></td>';
 					echo '<td><a target="blank" href="/'.$page['slug'].'" title="Visualizar página">[ Visualizar página ]</a></td>';
 					echo '</tr>';

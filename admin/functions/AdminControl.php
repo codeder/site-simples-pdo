@@ -4,15 +4,18 @@ require_once("db.php");
 
 /* FUNÇÕES DE USUÁRIOS */
 
-/* Hash seguro password */
-$options=['salt'=>"Frase segura de exemplo apenas",'cost'=>10];
-$password=password_hash($_POST['password'],PASSWORD_DEFAULT,$options);
+/* Salt seguro password */
+$salt= "Frase segura de exemplo apenas";
+$cost=10;
 
 
 /* Registra usuário */
-$registerUser = function() use ($conn,$password){
+$registerUser = function() use ($conn,$salt,$cost){
 
     if(isset($_POST['send'])){
+
+        $options=['salt'=>$salt,'cost'=>$cost];
+        $password=password_hash($_POST['password'],PASSWORD_DEFAULT,$options);
 
         /* Verifica se o campo username e email já existem no banco */
         $stmt = $conn->prepare("SELECT username,email FROM users WHERE username=:username OR email=:email");
@@ -24,7 +27,15 @@ $registerUser = function() use ($conn,$password){
             echo '<span class="bg-danger">O e-mail "<strong>'.$_POST['email'].'</strong>" já está sendo usado. Cadastre outro.</span>';
         }else if((strtolower($_POST['username']) == strtolower($result["username"]))){
             echo '<span class="bg-danger">O Username "<strong>'.$_POST['username'].'</strong>" já está sendo usado. Cadastre outro.</span>';
-        }else{
+        }
+
+        /* Verifica o password */
+        else if(empty($_POST['password'])){
+            echo '<span class="bg-danger">O campo "<strong>password</strong>" não pode ficar em branco.</span>';
+        }
+
+        /* Se tudo estiver ok, cadastra o usuário */
+        else{
 
             $query = "INSERT INTO users VALUES(null,:name,:username,:email,:password,:status)";
             $stmt = $conn->prepare($query);
@@ -45,9 +56,12 @@ $registerUser = function() use ($conn,$password){
 
 
 /* Editar usuários */
-$editUsers = function() use ($conn,$password){
+$editUsers = function() use ($conn,$salt,$cost){
 
     if(isset($_POST['send'])){
+
+        $options=['salt'=>$salt,'cost'=>$cost];
+        $password=password_hash($_POST['password'],PASSWORD_DEFAULT,$options);
 
         $query = "UPDATE users SET name=:name,username=:username,email=:email,password=:password,status=:status WHERE id=:id";
         $stmt = $conn->prepare($query);
@@ -67,18 +81,25 @@ $editUsers = function() use ($conn,$password){
 };
 
 /* Checar se o usuário está logado */
-$checkExistsUser = function() use($conn,$password){
+$checkExistsUser = function() use($conn,$salt,$cost){
 
-    if(isset($_POST['send'])){        
+    if(isset($_POST['send'])){
 
-        $stmt = $conn->prepare("SELECT name,username,password FROM users WHERE username=:username AND password=:password AND status <> 0");        
+        $options=['salt'=>$salt,'cost'=>$cost];
+        $password=password_hash($_POST['password'],PASSWORD_DEFAULT,$options);
+
+        $stmt = $conn->prepare("SELECT id,name,username,password FROM users WHERE username=:username AND password=:password AND status <> 0");        
         $stmt->bindValue(":username",$_POST['username'], PDO::PARAM_STR);
         $stmt->bindValue(":password",$password, PDO::PARAM_STR);
         $stmt->execute();
         
-        if( $row = $stmt->fetch() ){                                
+        $result = $stmt->fetch();
+
+        if( $row = $result ){                                
             session_start();
             $_SESSION['logged'] = true;
+            $_SESSION['id'] = $row[0];
+            $_SESSION['user'] = $row[1];
             header("Location: pages.php");
         }else{            
             echo '<span class="bg-danger">Login ou senha não conferem. Tente novamente</span>';

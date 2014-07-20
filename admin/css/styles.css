@@ -29,6 +29,12 @@ header{
 	display: block;
 	margin-bottom: 25px;
 }
+.bg-danger + .bg-danger{
+	margin-top: 10px;
+}
+.center{
+	text-align: center;
+}
 footer{
 	background: #ccc;
 	padding: 20px;

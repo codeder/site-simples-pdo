@@ -19,17 +19,17 @@
 
                 <div class="form-group">
                     <label for="name">Nome do usuário</label>
-                    <input type="text" name="name" class="form-control" id="name" value="<?php echo $_POST['name']; ?>">
+                    <input type="text" name="name" class="form-control" id="name" value="<?php if(isset($_POST['name'])) { echo $_POST['name']; } ?>">
                 </div>
 
                 <div class="form-group">
                     <label for="slug">Username</label>
-                    <input type="text" name="username" class="form-control" id="username" value="<?php echo $_POST['username']; ?>">
+                    <input type="text" name="username" class="form-control" id="username" value="<?php if(isset($_POST['username'])) { echo $_POST['username']; } ?>">
                 </div>
 
                 <div class="form-group">
                     <label for="email">E-mail:</label>
-                    <input type="email" name="email" class="form-control" id="email" value="<?php echo $_POST['email']; ?>">
+                    <input type="email" name="email" class="form-control" id="email" value="<?php if(isset($_POST['email'])) { echo $_POST['email']; } ?>">
                 </div>
 
                 <div class="form-group">
@@ -39,14 +39,14 @@
 
                 <div class="radio">
                     <label>
-                        <input type="radio" name="status" value="1"<?php if($_POST['status']==1){ echo "checked";} ?>>
+                        <input type="radio" name="status" value="1"<?php if((isset($_POST['status']) AND ($_POST['status']==1))){ echo "checked"; } ?>>
                         Ativo
                     </label>
                 </div>
 
                 <div class="radio">
                     <label>
-                        <input type="radio" name="status" value="0"<?php if($_POST['status']==0){ echo "checked";} ?>>
+                        <input type="radio" name="status" value="0"<?php if((isset($_POST['status']) AND ($_POST['status']==0))){ echo "checked"; } ?>>
                         Inativo
                     </label>
                 </div>

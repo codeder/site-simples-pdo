@@ -3,5 +3,5 @@
     $host = "localhost";
     $db = "codeeducation_pdo";
     $user = "root";
-    $pass = "storm1906";
+    $pass = "";
 ?>

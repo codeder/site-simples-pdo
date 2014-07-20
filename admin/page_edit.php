@@ -38,18 +38,19 @@
 						CKEDITOR.replace( 'content' );
 					</script>
 				</div>
-
-				<div class="radio">
+				
+				<label for="">Mostrar no menu superior?</label>
+				<div class="radio">					
 					<label>
 						<input type="radio" name="status" value="1" <?php echo ($page['status']==1 ? 'checked':'') ?>>
-						Ativa
+						Sim
 					</label>
 				</div>
 
 				<div class="radio">
 					<label>
 						<input type="radio" name="status" value="0" <?php echo ($page['status']==0 ? 'checked':'') ?>>
-						Inativa
+						Não
 					</label>
 				</div>
 

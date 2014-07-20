@@ -3,6 +3,7 @@
 <div class="content">
 
     <?php
+
     $query = "SELECT * FROM users WHERE id=:id";
     $result = $conn->prepare($query);
     $result->execute(array(':id' => $_GET['uid']) );

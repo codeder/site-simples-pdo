@@ -9,26 +9,38 @@
 <body>
 
 	<div class="container">
-		<div class="login">
 
-			<?php $checkExistsUser(); ?>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="login">
 
-			<div class="row">
-				<div class="col-md-12">
-					<form role="form" class="jumbotron" method="POST">
-						<div class="form-group">
-							<label for="username">Login</label>
-							<input type="text" class="form-control" name="username" id="username">
+					<?php $checkExistsUser(); ?>
+
+					<div class="row">
+						<div class="col-md-12">
+							<form role="form" class="jumbotron" method="POST">
+								<div class="form-group">
+									<label for="username">Login</label>
+									<input type="text" class="form-control" name="username" id="username">
+								</div>
+								<div class="form-group">
+									<label for="pass">Senha</label>
+									<input type="password" name="password" class="form-control" id="pass">
+								</div>
+
+								<button type="submit" name="send" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Entrar</button>
+
+							</form>
 						</div>
-						<div class="form-group">
-							<label for="pass">Senha</label>
-							<input type="password" name="password" class="form-control" id="pass">
-						</div>
-
-						<button type="submit" name="send" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Entrar</button>
-
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+			<p style="text-align:center"><strong>Login: </strong> admin <br><strong>Senha: </strong> admin123</p>
+			</div>
+		</div>
+
 	</div>
