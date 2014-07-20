@@ -1,7 +1,4 @@
-<?php require_once("inc/header.php"); ?>
-
 <?php
-$registerUser();
+	session_start();
+	header("Location: ../admin/pages.php");
 ?>
-
-<?php require_once("inc/header.php"); ?>

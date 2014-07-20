@@ -1,17 +1,34 @@
-<?php require_once("inc/header.php"); ?>
+<?php require_once("functions/AdminControl.php"); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin - Site simples com PDO</title>
+	<?php require_once("inc/scripts.php"); ?>
+</head>
+<body>
 
-<form role="form" class="jumbotron">
-  <div class="form-group">
-    <label for="username">Login</label>
-    <input type="text" class="form-control" name="username" id="username">
-  </div>
-  <div class="form-group">
-    <label for="pass">Senha</label>
-    <input type="password" name="password" class="form-control" id="pass">
-  </div>
+	<div class="container">
+		<div class="login">
 
-  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Entrar</button>
+			<?php $checkExistsUser(); ?>
 
-</form>
+			<div class="row">
+				<div class="col-md-12">
+					<form role="form" class="jumbotron" method="POST">
+						<div class="form-group">
+							<label for="username">Login</label>
+							<input type="text" class="form-control" name="username" id="username">
+						</div>
+						<div class="form-group">
+							<label for="pass">Senha</label>
+							<input type="password" name="password" class="form-control" id="pass">
+						</div>
 
-<?php require_once("inc/footer.php"); ?>
+						<button type="submit" name="send" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Entrar</button>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -1,5 +1,9 @@
 <?php
+session_start();
 require_once("functions/AdminControl.php");
+if(!$_SESSION['logged']){
+	header("Location: login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,21 +14,20 @@ require_once("functions/AdminControl.php");
 </head>
 <body>
 
-
 	<div class="container">
 
+		
 		<header class="row">
 
 			<div class="col-md-12">
 
 				<div class="row">
 					<div class="col-md-12">
-						<h1 class="brand"><a href="">Admin - Site simples com PDO</a></h1>
+						<h1 class="brand"><a href="/admin">Admin - Site simples com PDO</a></h1>
 					</div>
 				</div>
 
 				<div class="row">
-
 					<div class="col-md-12">
 						<ul class="nav nav-tabs" role="tablist">
 							<li><a href="../admin/user_edit.php" title="Bem-vindo Eder!">Bem-vindo Eder!</a></li>
@@ -33,9 +36,6 @@ require_once("functions/AdminControl.php");
 							<li><a href="../admin/logout.php" title="Sair">Sair</a></li>
 						</ul>
 					</div>
-
-
 				</div>
-
 
 			</header>
