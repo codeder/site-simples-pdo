@@ -66,34 +66,17 @@ $editUsers = function() use ($conn,$password){
     }
 };
 
-/* Listar usuários */
-$getUsers = function() use ($conn){
-    $query = "SELECT * FROM users ORDER BY id ASC";
-    $result = $conn->prepare($query);
-    $result->execute();
-    while ($user = $result->fetch(PDO::FETCH_ASSOC)) {
-        echo '<tr>';
-        echo '<td>'.$user['id'].'</td>';
-        echo '<td>'.$user['name'].'</td>';
-        echo '<td>'.$user['username'].'</td>';
-        echo '<td>'.$user['email'].'</td>';
-        echo '<td>'.($user['status']=="1" ? 'Ativo':'Inativo').'</td>';
-        echo '<td><a href="user_edit.php?uid='.$user['id'].'" title="Editar">editar</a></td>';
-        echo '</tr>';
-    }
-};
-
 /* Checar se o usuário está logado */
 $checkExistsUser = function() use($conn,$password){
 
     if(isset($_POST['send'])){        
 
-        $stmt = $conn->prepare("SELECT username,password FROM users WHERE username=:username AND password=:password");
+        $stmt = $conn->prepare("SELECT name,username,password FROM users WHERE username=:username AND password=:password AND status <> 0");        
         $stmt->bindValue(":username",$_POST['username'], PDO::PARAM_STR);
         $stmt->bindValue(":password",$password, PDO::PARAM_STR);
         $stmt->execute();
-
-        if( $row = $stmt->fetch() ){
+        
+        if( $row = $stmt->fetch() ){                                
             session_start();
             $_SESSION['logged'] = true;
             header("Location: pages.php");
@@ -101,6 +84,7 @@ $checkExistsUser = function() use($conn,$password){
             echo '<span class="bg-danger">Login ou senha não conferem. Tente novamente</span>';
         }
     }
+
 };
 
 

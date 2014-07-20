@@ -15,7 +15,7 @@
 			<h2>Páginas</h2>
 		</div>
 		<div class="col-md-6">
-			<a class="btn btn-primary pull-right" href="page_insert.php" title="Criar página">Criar página</a>
+			<a class="btn btn-primary pull-right btn-c" href="page_insert.php" title="Criar página">Criar página</a>
 		</div>
 	</div>
 
@@ -29,7 +29,6 @@
 					<th>Slug</th>
 					<th>Aparece no menu?</th>
 					<th>Editar</th>
-					<th>Excluir</th>
 					<th>Visualizar</th>
 				</tr>
 
@@ -44,9 +43,8 @@
 					echo '<td>'.$page['title'].'</td>';
 					echo '<td>'.$page['slug'].'</td>';
 					echo '<td>'.($page['status']=="1" ? 'Sim':'Não').'</td>';
-					echo '<td><a href="page_edit.php?id='.$page['id'].'" title="Editar">editar</a></td>';
-					echo '<td><a href="#" title="Excluir">excluir</a></td>';
-					echo '<td><a target="blank" href="/'.$page['slug'].'" title="Visualizar página">Visualizar página</a></td>';
+					echo '<td><a href="page_edit.php?id='.$page['id'].'" title="Editar">[ editar ]</a></td>';
+					echo '<td><a target="blank" href="/'.$page['slug'].'" title="Visualizar página">[ Visualizar página ]</a></td>';
 					echo '</tr>';
 				}
 				?>	
